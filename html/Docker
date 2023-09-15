@@ -1,0 +1,8 @@
+FROM alpine
+LABEL maintainer="Me"
+RUN apk add nodejs npm
+COPY  ./JS /src
+WORKDIR /src
+RUN npm install
+EXPOSE 8080
+ENTRYPOINT [ "node","/JS/index.js" ]
