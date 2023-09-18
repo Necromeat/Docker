@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+     backend:
+          image: apisupplier
+          ports:
+            - "8000:8000"
+          build:
+              context: ./API/app/
+              dockerfile: Docker
+              
+      
